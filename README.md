@@ -4,6 +4,8 @@ DECA Top level for SNES by Somhic (07/11/21) adapted from Neptuno port https://g
 
 **(THIS PORT REQUIRES AN SDRAM MODULE WITH SEPARATED DQMH/L SIGNALS - 3 pins old MiSTer memory modules should work)**
 
+22/04/22 now compatible with Deca Retro Cape 2 (new location for 3 pins of old SDRAM modules)
+
 **Features:**
 
 * ~~HDMI video output~~ (need to solve synchronism problems)

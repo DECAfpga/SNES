@@ -111,10 +111,8 @@ set_location_assignment PIN_W8 -to VGA_B[0]
 
 # Audio pwm output (P8:5,6 GPIO0_D02/03) and ear
 #(Atlas board: T12_left 1, 2 gnd, 3 R11_right)
-set_location_assignment PIN_V17 -to AUDIO_L
-set_location_assignment PIN_W3 -to AUDIO_R
-#set_location_assignment PIN_Y19 -to AUDIO_L
-#set_location_assignment PIN_AA17 -to AUDIO_R
+set_location_assignment PIN_Y19 -to AUDIO_L
+set_location_assignment PIN_AA17 -to AUDIO_R
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to AUDIO_L
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to AUDIO_R
 #set_location_assignment PIN_H4 -to ear_i
@@ -316,15 +314,11 @@ set_location_assignment PIN_V12 -to SDRAM_nCS
 set_location_assignment PIN_V11 -to SDRAM_BA[0]
 set_location_assignment PIN_V13 -to SDRAM_BA[1]
 
-# CKE and DQML/DQMH not connected on XS 2.2/2.4
-#set_location_assignment PIN_AA16 -to SDRAM_CKE
-#set_location_assignment PIN_Y11 -to SDRAM_DQML
-#set_location_assignment PIN_W13 -to SDRAM_DQMH
+#DQMH/L & CKE not connected in Mister new SDRAM modules
+set_location_assignment PIN_AA16 -to SDRAM_DQMH 
+set_location_assignment PIN_AB17 -to SDRAM_DQML
+set_location_assignment PIN_W13 -to SDRAM_CKE
 
-#for testing 3 pins sdram modules
-set_location_assignment PIN_W18 -to SDRAM_CKE
-set_location_assignment PIN_Y19 -to SDRAM_DQML
-set_location_assignment PIN_AA17 -to SDRAM_DQMH
 
 # SDRAM set_instance_assignment
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to SDRAM_A[12]
